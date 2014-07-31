@@ -1,0 +1,18 @@
+{
+  "name": "jsonresume-theme-polymer",
+  "version": "0.0.4",
+  "description": "Boilerplate theme for JSON Resume",
+  "author": "Mattias Erming",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erming/jsonresume-theme-boilerplate"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gravatar": "^1.0.6",
+    "handlebars": "^2.0.0-alpha.4",
+    "lodash": "^2.4.1",
+    "resume-schema": "jsonresume/resume-schema",
+    "vulcanize": "^0.4.1"
+  }
+}

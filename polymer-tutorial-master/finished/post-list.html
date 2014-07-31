@@ -1,0 +1,113 @@
+﻿<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../post-service/post-service.html">
+<link rel="import" href="../components/core-item/core-item.html">
+<link rel="import" href="../components/paper-item/paper-item.html">
+<link rel="import" href="../finished/resume-data.html">
+
+<polymer-element name="post-list" attributes="show">
+  <template>
+    <style>
+    :host {
+      display: block;
+      width: 100%;
+    }
+    post-card {
+      margin-bottom: 30px;
+
+      display: block;
+      position: relative;
+      background-color: white;
+      padding: 20px;
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    post-card h2 {
+
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+    post-card img {
+      width: 70px;
+      border-radius: 50%;
+      margin: 10px;
+    }
+
+    paper-item {
+      max-width: 320px;
+    }
+    </style>
+
+    <post-service id="service" posts="{{posts}}"></post-service>
+    <resume-data id="resume" resume="{{resume}}"></resume-data>
+    
+
+    <div layout vertical center  hidden?="{{show != 'about'}}">
+        <post-card>
+          <div class="" layout horizontal center>
+                <img src="{{resume.basics.gravatar}}" />
+                <h2>{{resume.basics.name}}</h2>
+          </div>
+          <p>{{resume.basics.summary}}</p>
+        </post-card>
+    </div>
+    <div layout vertical center hidden?="{{show != 'work'}}">
+      <template repeat="{{work in resume.work}}">
+
+        <post-card>
+          <h2>{{work.company}}</h2>
+          <h3>{{work.position}}</h3>
+          <label>{{work.startDateYear}} - {{work.endDateYear}}</label>
+          <p>{{work.summary}}</p>
+          <ul>
+        <template repeat="{{highlight in work.highlights}}">
+        <li>{{highlight}}</li>
+        </template>
+        </ul>
+        </post-card>
+        </template>
+    </div>
+    <div layout vertical center hidden?="{{show != 'education'}}">
+      <template repeat="{{education in resume.education}}">
+
+        <post-card>
+          <h2>{{education.institution}}</h2>
+          <label>{{education.startDateYear}} - {{education.endDateYear}}</label>
+
+          <p>{{education.area}}</p>
+
+        </post-card>
+        </template>
+    </div>
+
+    <div layout vertical center hidden?="{{show != 'references'}}">
+      <template repeat="{{reference in resume.references}}">
+
+        <post-card>
+          <p>{{reference.reference}}</p>
+          <strong>{{reference.name}}</strong>
+        </post-card>
+        </template>
+    </div>
+    <!--
+    <div layout vertical center>
+      <template repeat="{{post in posts}}">
+        <post-card
+          favorite="{{post.favorite}}"
+          on-favorite-tap="{{handleFavorite}}"
+          hidden?="{{show == 'favorites' && !post.favorite}}">
+          <img src="{{post.avatar}}" width="70" height="70">
+          <h2>{{post.username}}</h2>
+          <p>{{post.text}}</p>
+        </post-card>
+      </template>
+    </div>
+    -->
+  </template>
+
+  <script>
+  Polymer({
+  });
+  </script>
+</polymer-element>

@@ -1,0 +1,67 @@
+body {
+	background: #fff;
+	font: 15px Arial, Helvetica, sans-serif;
+	margin: 50px 0;
+	margin-bottom: 100px;
+}
+p {
+	line-height: 1.4;
+}
+section {
+	margin-bottom: 2em;
+}
+.item + .item {
+	margin-top: 1em;
+}
+#resume {
+	margin: 0 auto;
+	max-width: 640px;
+	padding: 0 20px;
+}
+#resume .label {
+	float: left;
+	width: 100px;
+}
+#basics h3 {
+	margin-top: 1.5em;
+}
+#references blockquote {
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    font-family: 'RobotoDraft', sans-serif;
+  }
+  core-header-panel {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+  core-toolbar {
+    background: #03a9f4;
+    color: white;
+  }
+  #tabs {
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .container {
+    width: 80%;
+    margin: 50px auto;
+  }
+  @media (min-width: 481px) {
+    #tabs {
+      width: 200px;
+    }
+    .container {
+      width: 400px;
+    }
+  }
