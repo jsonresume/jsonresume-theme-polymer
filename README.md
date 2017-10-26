@@ -1,5 +1,7 @@
 # Boilerplate theme [![NPM version](https://badge.fury.io/js/jsonresume-theme-boilerplate.png)](https://www.npmjs.org/package/jsonresume-theme-boilerplate)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jsonresume/jsonresume-theme-polymer.svg)](https://greenkeeper.io/)
+
 This is the boilerplate theme for [JSON Resume](http://jsonresume.org/).
 
 ## Getting started
